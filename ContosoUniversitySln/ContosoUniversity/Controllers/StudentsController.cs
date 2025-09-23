@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ContosoUniversity.DAL;
 using ContosoUniversity.Models;
+using PagedList;
 
 namespace ContosoUniversity.Controllers
 {
@@ -16,15 +17,24 @@ namespace ContosoUniversity.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Students
-        public ActionResult Index(string sortOrder,string searchStrings)
-        {
+        public ActionResult Index(string sortOrder,string searchStrings,string currentFilter,int? page)
+        {   ViewBag.currentSort=sortOrder; 
             ViewBag.NameSortParam = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             ViewBag.lastNameParam = string.IsNullOrEmpty(sortOrder) ? "Lname_desc" : "";
-            var students = from s in db.Students select s;
+            if (searchStrings != null)
+            {
+                page = 1;
+            }
+            else {
+                searchStrings = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchStrings;
+                var students = from s in db.Students select s;
             if (!String.IsNullOrEmpty(searchStrings))
             {
-                students = students.Where(s => s.FirstName.ToUpper().Contains(searchStrings.ToUpper())|| s.LastName.ToUpper().Contains(searchStrings.ToUpper()));
+                students = students.Where(s => s.FirstName.ToUpper().Contains(searchStrings.ToUpper())
+                || s.LastName.ToUpper().Contains(searchStrings.ToUpper()));
             }
             switch (sortOrder)
             {
@@ -38,7 +48,10 @@ namespace ContosoUniversity.Controllers
                     students =students.OrderByDescending(s => s.LastName);
                     break;
             }
-            return View(students.ToList());
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+
+            return View(students.ToPagedList(pageNumber,pageSize));
         }
 
         // GET: Students/Details/5

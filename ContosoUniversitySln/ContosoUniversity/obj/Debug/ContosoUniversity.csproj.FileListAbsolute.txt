@@ -170,3 +170,7 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoU.2F40B0B5.Up2Date
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.pdb
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.dll
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.dll
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.xml
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.xml
