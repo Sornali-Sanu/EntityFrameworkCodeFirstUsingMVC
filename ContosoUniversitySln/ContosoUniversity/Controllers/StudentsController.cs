@@ -16,9 +16,29 @@ namespace ContosoUniversity.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder,string searchStrings)
         {
-            return View(db.Students.ToList());
+            ViewBag.NameSortParam = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.lastNameParam = string.IsNullOrEmpty(sortOrder) ? "Lname_desc" : "";
+            var students = from s in db.Students select s;
+            if (!String.IsNullOrEmpty(searchStrings))
+            {
+                students = students.Where(s => s.FirstName.ToUpper().Contains(searchStrings.ToUpper())|| s.LastName.ToUpper().Contains(searchStrings.ToUpper()));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.FirstName);
+                        break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default :
+                    students =students.OrderByDescending(s => s.LastName);
+                    break;
+            }
+            return View(students.ToList());
         }
 
         // GET: Students/Details/5
