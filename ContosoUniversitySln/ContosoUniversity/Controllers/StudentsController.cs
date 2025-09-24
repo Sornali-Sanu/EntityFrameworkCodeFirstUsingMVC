@@ -4,10 +4,12 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Mvc;
 using ContosoUniversity.DAL;
 using ContosoUniversity.Models;
+using ContosoUniversity.ViewModels;
 using PagedList;
 
 namespace ContosoUniversity.Controllers
@@ -177,6 +179,17 @@ namespace ContosoUniversity.Controllers
             }
            
             return RedirectToAction("Index");
+        }
+        public ActionResult about()
+        {
+            IQueryable<EnrollmentDateGroup> data = from student in db.Students
+                                                   group student by student.EnrollmentDate into dateGroup
+                                                   select new EnrollmentDateGroup()
+                                                   {
+                                                       EnrollmentDate = dateGroup.Key,
+                                                       StudentCount = dateGroup.Count()
+                                                   };
+            return View(data.ToList());
         }
 
         protected override void Dispose(bool disposing)

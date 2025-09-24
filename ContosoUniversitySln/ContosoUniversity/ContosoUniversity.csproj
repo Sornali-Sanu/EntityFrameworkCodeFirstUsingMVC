@@ -154,6 +154,7 @@
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -180,11 +181,13 @@
     <Content Include="images\createStudentwithServersidevalidation.png" />
     <Content Include="images\homePage.png" />
     <Content Include="images\index.png" />
+    <Content Include="images\pageList.png" />
     <Content Include="images\searchingAndSorting.png" />
     <Content Include="images\studentDelete.png" />
     <Content Include="images\studentDetails.png" />
     <Content Include="images\studentEdit.png" />
     <Content Include="images\studentIndex.png" />
+    <Content Include="images\studentStatistics.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -221,6 +224,7 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Students\about.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
