@@ -1,2 +1,3 @@
 ﻿# EntityFrameworkCodeFirstUsingMVC
-![About App](images/aboutApp.png)
+![About App](ContosoUniversitySln/ContosoUniversity/images)
+
