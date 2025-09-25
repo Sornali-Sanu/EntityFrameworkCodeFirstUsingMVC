@@ -140,18 +140,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202509210933158_InitialCreate.cs" />
-    <Compile Include="Migrations\202509210933158_InitialCreate.Designer.cs">
-      <DependentUpon>202509210933158_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202509210943075_init.cs" />
-    <Compile Include="Migrations\202509210943075_init.Designer.cs">
-      <DependentUpon>202509210943075_init.cs</DependentUpon>
+    <Compile Include="Migrations\202509250438444_init.cs" />
+    <Compile Include="Migrations\202509250438444_init.Designer.cs">
+      <DependentUpon>202509250438444_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Grade.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
@@ -257,11 +255,8 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202509210933158_InitialCreate.resx">
-      <DependentUpon>202509210933158_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202509210943075_init.resx">
-      <DependentUpon>202509210943075_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202509250438444_init.resx">
+      <DependentUpon>202509250438444_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -37,8 +37,8 @@
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        LastName = c.String(),
-                        FirstName = c.String(),
+                        LastName = c.String(nullable: false, maxLength: 50),
+                        FirstName = c.String(name: "First Name", nullable: false, maxLength: 50),
                         EnrollmentDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);

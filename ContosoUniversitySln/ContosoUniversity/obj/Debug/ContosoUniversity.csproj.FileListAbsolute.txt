@@ -163,9 +163,6 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Antlr3.Runtime.pdb
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.AssemblyReference.cache
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.InitialCreate.resources
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.CoreCompileInputs.cache
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoU.2F40B0B5.Up2Date
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.dll
@@ -174,3 +171,5 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.xml
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache
