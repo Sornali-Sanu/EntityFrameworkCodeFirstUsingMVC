@@ -70,6 +70,14 @@ Student Statistics:
 
 ![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentStatistics.png)
 
+```
+Instructor:
+
+```
+
+![studentlist](ContosoUniversitySln/ContosoUniversity/images/instructor.png)
+
+
 
 
 
