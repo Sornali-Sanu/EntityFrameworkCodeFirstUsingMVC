@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ContosoUniversity.DAL;
 using ContosoUniversity.Models;
+using ContosoUniversity.ViewModels;
 
 namespace ContosoUniversity.Controllers
 {
@@ -16,10 +17,22 @@ namespace ContosoUniversity.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Instructor
-        public ActionResult Index()
+        public ActionResult Index(int? id,int? courseId)
         {
-            var instructors = db.Instructors.Include(i => i.OfficeAssignment);
-            return View(instructors.ToList());
+            var viewModel = new InstructorIndexData();
+            viewModel.Instructors = db.Instructors.Include(i => i.OfficeAssignment).Include(i => i.Courses.Select(c => c.Department)).OrderBy(i => i.LastName).ToList();
+            if (id != null)
+            {
+                ViewBag.InstructorID = id.Value;
+                viewModel.Courses = viewModel.Instructors.Where(i => i.ID == id.Value).Single().Courses;
+            }
+            if (courseId != null)
+            {
+                ViewBag.CourseID = courseId.Value;
+                viewModel.Enrollments=viewModel.Courses.Where(x=>x.CourseID==courseId).Single().Enrollments;
+                
+            }
+            return View(viewModel);
         }
 
         // GET: Instructor/Details/5

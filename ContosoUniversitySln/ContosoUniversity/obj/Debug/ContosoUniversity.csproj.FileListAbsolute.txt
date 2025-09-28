@@ -142,6 +142,8 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Microsoft.Web.Infrastructure.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Newtonsoft.Json.dll
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.dll
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Helpers.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Mvc.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Optimization.dll
@@ -152,6 +154,8 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\WebGrease.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\EntityFramework.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\EntityFramework.SqlServer.xml
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.xml
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Helpers.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Mvc.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\System.Web.Optimization.xml
@@ -163,13 +167,9 @@ D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Antlr3.Runtime.pdb
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.AssemblyReference.cache
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
+D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.CoreCompileInputs.cache
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoU.2F40B0B5.Up2Date
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.dll
 D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.pdb
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.dll
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.dll
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.xml
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\PagedList.Mvc.xml
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
-D:\EntityFramework\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache

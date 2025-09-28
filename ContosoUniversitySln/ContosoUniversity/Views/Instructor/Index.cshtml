@@ -1,36 +1,39 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Instructor>
+﻿@model  ContosoUniversity.ViewModels.InstructorIndexData
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Instructors";
 }
 
-<h2>Index</h2>
+<h2>Instructors</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+
         <th>
-            @Html.DisplayNameFor(model => model.OfficeAssignment.Location)
+            Last Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            First Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            HireDate
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HireDate)
+          Office
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OfficeAssignment.Location)
-        </td>
+@foreach (var item in Model.Instructors) {
+    string selectRow = "";
+    if(item.ID==ViewBag.InstructorID)
+    {
+        selectRow = "success";
+    }
+    <tr class="@selectRow">
         <td>
             @Html.DisplayFor(modelItem => item.LastName)
         </td>
@@ -41,11 +44,64 @@
             @Html.DisplayFor(modelItem => item.HireDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @if (item.OfficeAssignment != null)
+            {
+                @item.OfficeAssignment.Location
+            }
         </td>
+        <td>
+            @Html.ActionLink("Select", "Index", new { id = item.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+
     </tr>
+
 }
 
 </table>
+@if(Model.Courses!=null)
+{
+    <h3>
+        Courses Taught by Selected Instructor
+    </h3>
+    <table class="table">
+<tr>
+    <th>
+
+    </th>
+    <th>
+        Number
+    </th>
+    <th>
+        Title
+    </th>
+    <th>
+        Department
+    </th>
+
+
+</tr>
+        @foreach(var item in Model.Courses)
+        {
+            string selectRow = "";
+            if(item.CourseID==ViewBag.CourseID)
+            {
+                selectRow = "success";
+
+            }
+            <tr class="@selectRow">
+                <td>
+                    @item.CourseID
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Department.Name
+                </td>
+            </tr>
+        }
+    </table>
+}
