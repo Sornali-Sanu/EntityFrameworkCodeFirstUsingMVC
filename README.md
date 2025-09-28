@@ -5,7 +5,7 @@ Home page :
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/homePage.png)
+![HomePage](ContosoUniversitySln/ContosoUniversity/images/homePage.png)
 
 ```
 
@@ -18,33 +18,33 @@ Student Index:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentIndex.png)
+![studentIndex](ContosoUniversitySln/ContosoUniversity/images/studentIndex.png)
 ```
 Student create:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/createStudentwithServersidevalidation.png)
+![studentCreate](ContosoUniversitySln/ContosoUniversity/images/createStudentwithServersidevalidation.png)
 
 ```
 Student Edit:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentEdit.png)
+![studentEdit](ContosoUniversitySln/ContosoUniversity/images/studentEdit.png)
 ```
 Student Delete:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentDelete.png)
+![studentDelete](ContosoUniversitySln/ContosoUniversity/images/studentDelete.png)
 
 ```
 Student Details:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentDetails.png)
+![studentDetails](ContosoUniversitySln/ContosoUniversity/images/studentDetails.png)
 
 
 
@@ -53,14 +53,14 @@ searching and sorting:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/searchingAndSorting.png)
+![sorting and searching](ContosoUniversitySln/ContosoUniversity/images/searchingAndSorting.png)
 
 ```
 Paged List:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/pageList.png)
+![page list](ContosoUniversitySln/ContosoUniversity/images/pageList.png)
 
 
 ```
@@ -68,14 +68,23 @@ Student Statistics:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/studentStatistics.png)
+![student statistics](ContosoUniversitySln/ContosoUniversity/images/studentStatistics.png)
 
 ```
 Instructor:
 
 ```
 
-![studentlist](ContosoUniversitySln/ContosoUniversity/images/instructor.png)
+![Instructors](ContosoUniversitySln/ContosoUniversity/images/instructors.png)
+
+
+```
+ClientSide Validation:
+
+```
+
+![ClientSideValidation](ContosoUniversitySln/ContosoUniversity/images/clientsideValidation.png)
+
 
 
 
