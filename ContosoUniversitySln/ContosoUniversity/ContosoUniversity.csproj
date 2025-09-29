@@ -155,6 +155,7 @@
     <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AssignedCourseData.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
     <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
@@ -184,6 +185,7 @@
     <Content Include="images\createStudentwithServersidevalidation.png" />
     <Content Include="images\homePage.png" />
     <Content Include="images\index.png" />
+    <Content Include="images\instructorCreate.png" />
     <Content Include="images\instructors.png" />
     <Content Include="images\pageList.png" />
     <Content Include="images\searchingAndSorting.png" />
