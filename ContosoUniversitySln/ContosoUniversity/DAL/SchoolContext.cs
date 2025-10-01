@@ -12,7 +12,8 @@ namespace ContosoUniversity.DAL
     {
         public SchoolContext():base("SchoolContext")
         {
-            
+            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+
         }
         public DbSet<Student> Students { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
@@ -24,6 +25,7 @@ namespace ContosoUniversity.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Course>().HasMany(c => c.Instructors).WithMany(c => c.Courses).Map(t => t.MapLeftKey("CourseID").MapRightKey("InstructorID").ToTable("CourseInstructor"));
+            modelBuilder.Entity<Department>().MapToStoredProcedures();
         }
     }
 }

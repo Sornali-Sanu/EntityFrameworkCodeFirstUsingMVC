@@ -147,6 +147,10 @@
     <Compile Include="Migrations\202509250624181_init.Designer.cs">
       <DependentUpon>202509250624181_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202510010423541_DepartmentSP.cs" />
+    <Compile Include="Migrations\202510010423541_DepartmentSP.Designer.cs">
+      <DependentUpon>202510010423541_DepartmentSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
@@ -188,6 +192,7 @@
     <Content Include="images\index.png" />
     <Content Include="images\instructorCreate.png" />
     <Content Include="images\instructors.png" />
+    <Content Include="images\log_OutputWindow.png" />
     <Content Include="images\pageList.png" />
     <Content Include="images\searchingAndSorting.png" />
     <Content Include="images\studentDelete.png" />
@@ -281,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202509250624181_init.resx">
       <DependentUpon>202509250624181_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202510010423541_DepartmentSP.resx">
+      <DependentUpon>202510010423541_DepartmentSP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
