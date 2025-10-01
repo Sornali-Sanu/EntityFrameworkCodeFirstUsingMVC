@@ -206,6 +206,12 @@ if you want to see the sp in the output window use this in DAL/SchoolContext Con
 
 
 ```
+```
+output window:
+
+```
+
+![Create Department window log](ContosoUniversitySln/ContosoUniversity/images/log_OutputWindow.png)
 
 🤝 Contribution
 
@@ -227,6 +233,7 @@ Open a Pull Request
 This project is licensed under the MIT License.
 You’re free to use, modify, and distribute for learning and personal projects.
  
+
 
 
 
