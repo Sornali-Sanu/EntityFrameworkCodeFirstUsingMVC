@@ -196,6 +196,15 @@ Open Migrations\<timestamp>_DepartmentSP.cs to see the code in the Up method tha
 creates Insert, Update, and Delete stored procedures.
 and Update-database
 
+if you want to see the sp in the output window use this in DAL/SchoolContext Constructor:
+
+  public SchoolContext() : base("SchoolContext")
+    {
+        
+        this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+    }
+
+
 ```
 
 🤝 Contribution
@@ -218,6 +227,7 @@ Open a Pull Request
 This project is licensed under the MIT License.
 You’re free to use, modify, and distribute for learning and personal projects.
  
+
 
 
 
