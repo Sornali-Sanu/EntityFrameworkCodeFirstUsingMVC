@@ -178,7 +178,25 @@ Create Instructor with course & Location:
 ```
 
 ![Create Instructors](ContosoUniversitySln/ContosoUniversity/images/instructorCreate.png)
+```
+***Note***
+For inserting,updating and deleting Department information I used store Procedure. In  DAL\SchoolContext.cs, add the highlighted code to the OnModelCreating method:
+protected override void OnModelCreating(DbModelBuilder modelBuilder) 
+{ 
+modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); 
+modelBuilder.Entity<Course>() 
+.HasMany(c => c.Instructors).WithMany(i => i.Courses) 
+.Map(t => t.MapLeftKey("CourseID") 
+.MapRightKey("InstructorID") 
+.ToTable("CourseInstructor"));
+modelBuilder.Entity<Department>().MapToStoredProcedures(); 
+}
+then in PM use add-migration DepartmentSP
+Open Migrations\<timestamp>_DepartmentSP.cs to see the code in the Up method that 
+creates Insert, Update, and Delete stored procedures.
+and Update-database
 
+```
 
 🤝 Contribution
 
@@ -200,6 +218,7 @@ Open a Pull Request
 This project is licensed under the MIT License.
 You’re free to use, modify, and distribute for learning and personal projects.
  
+
 
 
 
