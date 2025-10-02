@@ -5,6 +5,9 @@
 }
 
 <h2>Delete</h2>
+<p class="error">@ViewBag.ConcurrencyErrorMessage
+
+</p>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -19,7 +22,7 @@
             @Html.DisplayFor(model => model.Administrator.FullName)
         </dd>
         <dt>
-         Department
+            Department
         </dt>
 
         <dd>
@@ -44,9 +47,11 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
-
+        @Html.HiddenFor(model => model.DepartmentID)
+        @Html.Hidden("RowVersion", Convert.ToBase64String(Model.RowVersion))
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")

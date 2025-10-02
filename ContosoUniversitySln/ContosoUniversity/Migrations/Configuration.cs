@@ -70,9 +70,7 @@ p.LastName, s));
 
             var departments = new List<Department>
             {
-                new Department { Name = "English",     Budget = 350000,
-StartDate = DateTime.Parse("2007-09-01"),
-InstructorID  = instructors.Single( i => i.LastName ==
+                new Department { Name = "English",Budget = 350000,StartDate = DateTime.Parse("2007-09-01"),InstructorID  = instructors.Single( i => i.LastName ==
 "Abercrombie").ID },
 new Department { Name = "Mathematics", Budget = 100000,
 StartDate = DateTime.Parse("2007-09-01"),
@@ -238,7 +236,8 @@ context.OfficeAssignments.AddOrUpdate(p => p.InstructorID, s));
 "Composition").CourseID,
                     Grade = Grade.B
                  },
-                 new Enrollment {StudentID = students.Single(s => s.LastName ==
+                 new Enrollment {
+StudentID = students.Single(s => s.LastName ==
 "Justice").ID,
 CourseID = courses.Single(c => c.Title ==
 "Literature").CourseID,
