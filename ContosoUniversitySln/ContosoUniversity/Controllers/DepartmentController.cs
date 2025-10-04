@@ -150,17 +150,24 @@ namespace ContosoUniversity.Controllers
             Department department =  db.Departments.Find(id);
             if (department == null)
             {
-                return HttpNotFound();
+                ViewBag.Message = "The record you attempted to delete was already removed by another user. Please refresh the list and try again.";
+
+                return View("Error");
             }
             if (concurrencyError.GetValueOrDefault())
             {
                 if (department == null)
                 {
-                    ViewBag.ConcurrencyErrorMessage = "The record you attempted to delete " + "was deleted by another user after you got the original values. "+ "Click the Back to List hyperlink.";
+                    ViewBag.ConcurrencyErrorMessage = "The record you attempted to delete " + 
+                        "was deleted by another user after you got the original values. "+
+                        "Click the Back to List hyperlink.";
                 }
                 else
                 {
-                    ViewBag.ConcurrencyErrorMessage = "The record you attempted to delete " + "was modified by another user after you got the original values. " + "The delete operation was canceled and the current values in the " + "database have been displayed. If you still want to delete this " 
+                    ViewBag.ConcurrencyErrorMessage = "The record you attempted to delete " +
+                        "was modified by another user after you got the original values. " + 
+                        "The delete operation was canceled and the current values in the " + 
+                        "database have been displayed. If you still want to delete this " 
                         + "record, click the Delete button again. Otherwise "
                         + "click the Back to List hyperlink.";
                 }
@@ -169,7 +176,7 @@ namespace ContosoUniversity.Controllers
         }
 
         // POST: Department/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(Department department)
         {
@@ -181,7 +188,7 @@ namespace ContosoUniversity.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                return RedirectToAction("Delete", new { id = department.DepartmentID, concurrencyError = true });
+                return RedirectToAction("Delete", new { concurrencyError = true });
             }
             catch (DataException)
             {

@@ -32,17 +32,19 @@
                         RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
                     })
                 .PrimaryKey(t => t.DepartmentID)
-                .ForeignKey("dbo.Instructor", t => t.InstructorID)
+                .ForeignKey("dbo.Person", t => t.InstructorID)
                 .Index(t => t.InstructorID);
             
             CreateTable(
-                "dbo.Instructor",
+                "dbo.Person",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
                         LastName = c.String(maxLength: 50),
                         FirstName = c.String(nullable: false, maxLength: 50),
-                        HireDate = c.DateTime(nullable: false),
+                        HireDate = c.DateTime(),
+                        EnrollmentDate = c.DateTime(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -54,7 +56,7 @@
                         Location = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.InstructorID)
-                .ForeignKey("dbo.Instructor", t => t.InstructorID)
+                .ForeignKey("dbo.Person", t => t.InstructorID)
                 .Index(t => t.InstructorID);
             
             CreateTable(
@@ -68,20 +70,9 @@
                     })
                 .PrimaryKey(t => t.EnrollmentID)
                 .ForeignKey("dbo.Course", t => t.CourseID, cascadeDelete: true)
-                .ForeignKey("dbo.Student", t => t.StudentID, cascadeDelete: true)
+                .ForeignKey("dbo.Person", t => t.StudentID, cascadeDelete: true)
                 .Index(t => t.CourseID)
                 .Index(t => t.StudentID);
-            
-            CreateTable(
-                "dbo.Student",
-                c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        LastName = c.String(nullable: false, maxLength: 50),
-                        FirstName = c.String(name: "First Name", nullable: false, maxLength: 50),
-                        EnrollmentDate = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.CourseInstructor",
@@ -92,7 +83,7 @@
                     })
                 .PrimaryKey(t => new { t.CourseID, t.InstructorID })
                 .ForeignKey("dbo.Course", t => t.CourseID, cascadeDelete: true)
-                .ForeignKey("dbo.Instructor", t => t.InstructorID, cascadeDelete: true)
+                .ForeignKey("dbo.Person", t => t.InstructorID, cascadeDelete: true)
                 .Index(t => t.CourseID)
                 .Index(t => t.InstructorID);
             
@@ -159,13 +150,13 @@
             DropStoredProcedure("dbo.Department_Delete");
             DropStoredProcedure("dbo.Department_Update");
             DropStoredProcedure("dbo.Department_Insert");
-            DropForeignKey("dbo.CourseInstructor", "InstructorID", "dbo.Instructor");
+            DropForeignKey("dbo.CourseInstructor", "InstructorID", "dbo.Person");
             DropForeignKey("dbo.CourseInstructor", "CourseID", "dbo.Course");
-            DropForeignKey("dbo.Enrollment", "StudentID", "dbo.Student");
+            DropForeignKey("dbo.Enrollment", "StudentID", "dbo.Person");
             DropForeignKey("dbo.Enrollment", "CourseID", "dbo.Course");
             DropForeignKey("dbo.Course", "DepartmentID", "dbo.Department");
-            DropForeignKey("dbo.Department", "InstructorID", "dbo.Instructor");
-            DropForeignKey("dbo.OfficeAssignment", "InstructorID", "dbo.Instructor");
+            DropForeignKey("dbo.Department", "InstructorID", "dbo.Person");
+            DropForeignKey("dbo.OfficeAssignment", "InstructorID", "dbo.Person");
             DropIndex("dbo.CourseInstructor", new[] { "InstructorID" });
             DropIndex("dbo.CourseInstructor", new[] { "CourseID" });
             DropIndex("dbo.Enrollment", new[] { "StudentID" });
@@ -174,10 +165,9 @@
             DropIndex("dbo.Department", new[] { "InstructorID" });
             DropIndex("dbo.Course", new[] { "DepartmentID" });
             DropTable("dbo.CourseInstructor");
-            DropTable("dbo.Student");
             DropTable("dbo.Enrollment");
             DropTable("dbo.OfficeAssignment");
-            DropTable("dbo.Instructor");
+            DropTable("dbo.Person");
             DropTable("dbo.Department");
             DropTable("dbo.Course");
         }
