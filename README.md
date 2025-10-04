@@ -213,6 +213,19 @@ output window:
 
 ![Create Department window log](ContosoUniversitySln/ContosoUniversity/images/log_OutputWindow.png)
 
+```
+Department Edit Concurency:
+
+```
+
+![Create Department window log](ContosoUniversitySln/ContosoUniversity/images/editConcurency.png)
+
+```
+Department Delete Concurency:
+
+```
+
+![Create Department window log](ContosoUniversitySln/ContosoUniversity/images/deleteConcurency.png)
 🤝 Contribution
 
 Contributions are welcome!
@@ -233,6 +246,7 @@ Open a Pull Request
 This project is licensed under the MIT License.
 You’re free to use, modify, and distribute for learning and personal projects.
  
+
 
 
 
