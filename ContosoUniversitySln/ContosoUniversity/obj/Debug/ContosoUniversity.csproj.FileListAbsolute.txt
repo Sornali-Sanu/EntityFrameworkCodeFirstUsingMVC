@@ -256,9 +256,9 @@ D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniv
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Antlr3.Runtime.pdb
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.AssemblyReference.cache
+D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
+D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.CoreCompileInputs.cache
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoU.2F40B0B5.Up2Date
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.dll
 D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.pdb
-D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.Migrations.init.resources
-D:\Backup\EntityFramework new\ContosoUniversity\ContosoUniversitySln\ContosoUniversity\obj\Debug\ContosoUniversity.csproj.GenerateResource.cache

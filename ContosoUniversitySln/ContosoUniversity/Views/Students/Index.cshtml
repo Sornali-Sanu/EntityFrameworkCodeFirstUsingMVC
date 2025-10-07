@@ -8,10 +8,10 @@
 
 <h2>Index</h2>
 <p>
-    @Html.ActionLink("Student Statistics", "about")
+    @Html.ActionLink("Student Statistics", "about", null, new {@class= "btn btn-info" })
 </p>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
 </p>
 @using (Html.BeginForm("Index", "Students", FormMethod.Get))
 {
@@ -46,9 +46,9 @@
             @Html.DisplayFor(modelItem => item.EnrollmentDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID },  new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID },  new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

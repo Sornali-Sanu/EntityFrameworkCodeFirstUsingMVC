@@ -22,7 +22,7 @@ namespace ContosoUniversity.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Find Me:";
 
             return View();
         }

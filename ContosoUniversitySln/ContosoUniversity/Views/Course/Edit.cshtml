@@ -40,17 +40,18 @@
                 @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
             </div>
         </div>
+        <br/>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
-
+<br/>
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-warning" } )
 </div>
 
 @section Scripts {

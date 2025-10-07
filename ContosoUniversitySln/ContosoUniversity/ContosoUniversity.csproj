@@ -187,6 +187,7 @@
     <Content Include="images\createStudentwithServersidevalidation.png" />
     <Content Include="images\deleteConcurency.png" />
     <Content Include="images\editConcurency.png" />
+    <Content Include="images\homeimg.jpg" />
     <Content Include="images\homePage.png" />
     <Content Include="images\index.png" />
     <Content Include="images\instructorCreate.png" />
